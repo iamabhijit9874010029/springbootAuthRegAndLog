@@ -1,11 +1,13 @@
 package com.example.authentication.controller;
 
-import com.example.authentication.dto.AuthResponse;
 import com.example.authentication.dto.LoginRequest;
 import com.example.authentication.dto.RegisterRequest;
 import com.example.authentication.service.UserService;
 import jakarta.validation.Valid;
 
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,12 +22,12 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public String register(@Valid @RequestBody RegisterRequest request) {
+    public ResponseEntity<Map<String, String>> register(@Valid @RequestBody RegisterRequest request) {
         return userService.register(request);
     }
 
     @PostMapping("/login")
-    public AuthResponse login(@Valid @RequestBody LoginRequest request) {
+    public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
         return userService.login(request);
     }
 }
