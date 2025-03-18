@@ -7,7 +7,10 @@ API request body (JOSN) for register =
   "password": "password123"
 }
 
-API response after successfully registered = User registered successfully!
+API response after successfully registered = 
+{
+    "message": "User registered successfully!"
+}
 
 
 
@@ -15,7 +18,8 @@ API response after successfully registered = User registered successfully!
 
 API end pont for login = http://localhost:8080/auth/login
 
-API request body (JOSN) for login ={
+API request body (JOSN) for login =
+{
   "email": "testuser@example.com",
   "password": "password123"
 }
