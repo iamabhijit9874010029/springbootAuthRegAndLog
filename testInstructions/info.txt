@@ -1,0 +1,26 @@
+API end pont for register = http://localhost:8080/auth/register
+
+API request body (JOSN) for register = 
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+API response after successfully registered = User registered successfully!
+
+
+
+
+
+API end pont for login = http://localhost:8080/auth/login
+
+API request body (JOSN) for login ={
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+API response after successfully logged in =
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTc0MjI4MDk4NiwiZXhwIjoxNzQyMzY3Mzg2fQ.m9w3GPOJjiM20Vl-7nkTG_iTkYGNlZPiHKjgh0tGvwo"
+}
