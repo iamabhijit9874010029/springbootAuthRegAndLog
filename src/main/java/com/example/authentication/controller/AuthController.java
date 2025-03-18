@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = "http://localhost:4200") // Allow frontend to access this endpoint
 public class AuthController {
 
     private final UserService userService;
